@@ -1,0 +1,139 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: hsl(222, 26%, 31%);
+  font-family: Spartan;
+}
+
+#calc {
+  width: 475px;
+  height: 600px;
+  display: grid;
+  grid-template-rows: 50px 150px 440px;
+  box-sizing: border-box;
+}
+#head {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 30px;
+  align-items: center;
+}
+#theme {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  width: 140px;
+}
+
+#tno {
+  letter-spacing: 4px;
+  margin-top: -20px;
+  margin-left: 6px;
+}
+.rbtn {
+  display: flex;
+  margin-top: -15px;
+  padding-bottom: 3px;
+  border-radius: 10px;
+  width: 60px;
+  height: 20px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  background: hsl(223, 31%, 20%);
+}
+.Rbtn {
+  -webkit-appearance: none;
+  width: 21px;
+  height: 14px;
+  border-radius: 10px;
+}
+.Rbtn:checked {
+  background: hsl(6, 63%, 50%);
+}
+.Rbtn:nth-child(3):checked {
+  background: hsl(176, 100%, 44%);
+}
+#txt {
+  margin: 10px 0 20px 0;
+  border-radius: 10px;
+  border: 0px;
+  color: white;
+  font-size: 45px;
+  width: 100%;
+  height: 70%;
+  text-align: right;
+  background: hsl(223, 31%, 20%);
+}
+#input {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, minmax(70px, 1fr));
+  padding: 20px;
+  border-radius: 10px;
+  background: hsl(223, 31%, 20%);
+  box-sizing: border-box;
+  height: 90%;
+}
+
+.btn {
+  margin: 10px 10px;
+  border: 0;
+  box-shadow: 0 5px 1px hsl(28, 16%, 65%);
+  border-radius: 5px;
+  font-size: 32px;
+  font-weight: 500;
+  color: hsl(221, 14%, 31%);
+  background: hsl(30, 25%, 89%);
+  text-align: center;
+}
+#reset,
+#equal {
+  width: 200px;
+  font-size: 25px;
+  font-weight: 500;
+}
+#equal {
+  margin-left: 120px;
+  background: hsl(6, 63%, 50%);
+  box-shadow: 0 5px 1px hsl(6, 70%, 34%);
+}
+
+#reset,
+#del {
+  font-size: 25px;
+  background: hsl(225, 21%, 49%);
+  box-shadow: 0 5px 1px hsl(224, 28%, 35%);
+}
+@media (max-width: 525px) {
+  #reset,
+  #equal {
+    width: 140px;
+    height: 50px;
+  }
+  #equal {
+    margin-left: 85px;
+  }
+  #input {
+    padding: 10px;
+    width: 330px;
+    box-sizing: border-box;
+  }
+  .btn {
+    margin: 10px 8px;
+  }
+  #calc {
+    grid-template-rows: 50px 100px 380px;
+  }
+  #calc,
+  #head,
+  #txt {
+    width: 330px;
+    box-sizing: border-box;
+  }
+}
